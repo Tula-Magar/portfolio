@@ -1,38 +1,81 @@
 .App {
-  text-align: center;
+  font-family: "Poppins";
+  font-size: 14px;
+  background-color: #1e1e1e;
+  background-image: linear-gradient(to right, #1f4037, #99f2c8);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  color: #fff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.aboutmeContainer {
+  animation: fadein 5s;
+}
+.full-screen-section {
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
+@keyframes fadein {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
   }
 }
+
+.aboutme {
+  animation: slidein 5s;
+}
+
+@keyframes slidein {
+  from {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/* .card {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.card.in-view {
+  opacity: 1;
+}
+
+.animate-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.animate-left.in-view {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.animate-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.animate-right.in-view {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.animate-bottom {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.animate-bottom.in-view {
+  opacity: 1;
+  transform: translateY(0);
+} */
