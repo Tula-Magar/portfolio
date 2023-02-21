@@ -11,6 +11,7 @@ import Home from "./General/Home";
 import About from "./General/AboutMe";
 import Contact from "./General/Contact";
 import Footer from "./General/Footer";
+import Experience from "./Work/Experience";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/experience" element={<Experience />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />

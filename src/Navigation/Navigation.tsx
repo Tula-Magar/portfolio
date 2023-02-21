@@ -27,6 +27,13 @@ export default function Navigation() {
               </Nav.Link>
               <Nav.Link
                 as={NavLink}
+                to="/experience"
+                onClick={() => setExpanded(false)}
+              >
+                Experience
+              </Nav.Link>
+              <Nav.Link
+                as={NavLink}
                 to="/contact"
                 onClick={() => setExpanded(false)}
               >
