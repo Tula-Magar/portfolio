@@ -8,7 +8,9 @@ export default function Navigation() {
     <>
       <Navbar expand="md" expanded={expanded}>
         <Container className="pt-3">
-          <Navbar.Brand href="/">Tula Magar</Navbar.Brand>
+          <Navbar.Brand as={Navbar} to="/">
+            Tula Magar
+          </Navbar.Brand>
           <Navbar.Toggle
             className="bg-white"
             onClick={() => setExpanded((expanded) => !expanded)}
