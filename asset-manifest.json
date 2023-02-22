@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Tula-Magar/portfolio/static/css/main.6d5985ee.css",
-    "main.js": "/Tula-Magar/portfolio/static/js/main.f3ff177c.js",
-    "static/js/787.1ed0c42c.chunk.js": "/Tula-Magar/portfolio/static/js/787.1ed0c42c.chunk.js",
-    "index.html": "/Tula-Magar/portfolio/index.html",
-    "main.6d5985ee.css.map": "/Tula-Magar/portfolio/static/css/main.6d5985ee.css.map",
-    "main.f3ff177c.js.map": "/Tula-Magar/portfolio/static/js/main.f3ff177c.js.map",
-    "787.1ed0c42c.chunk.js.map": "/Tula-Magar/portfolio/static/js/787.1ed0c42c.chunk.js.map"
+    "main.css": "/portfolio/static/css/main.6d5985ee.css",
+    "main.js": "/portfolio/static/js/main.01d28be4.js",
+    "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
+    "index.html": "/portfolio/index.html",
+    "main.6d5985ee.css.map": "/portfolio/static/css/main.6d5985ee.css.map",
+    "main.01d28be4.js.map": "/portfolio/static/js/main.01d28be4.js.map",
+    "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6d5985ee.css",
-    "static/js/main.f3ff177c.js"
+    "static/js/main.01d28be4.js"
   ]
 }
