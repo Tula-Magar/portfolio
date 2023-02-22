@@ -8,7 +8,7 @@ export default function Navigation() {
     <>
       <Navbar expand="md" expanded={expanded}>
         <Container className="pt-3">
-          <Navbar.Brand as={Navbar} to="/">
+          <Navbar.Brand as={NavLink} to="/">
             Tula Magar
           </Navbar.Brand>
           <Navbar.Toggle
