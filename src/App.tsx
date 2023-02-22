@@ -4,7 +4,7 @@ import ScrollToTop from "./Scroll/ScrollToTop";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Navitgation from "./Navigation/Navigation";
 
 import Home from "./General/Home";
