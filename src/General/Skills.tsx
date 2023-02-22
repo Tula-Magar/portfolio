@@ -1,14 +1,15 @@
-import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import { useInView } from "react-intersection-observer";
 
 export default function Skills() {
+  const { ref, inView } = useInView({ threshold: 0.5 });
   return (
     <>
       <Container className="my-5 py-5">
         <h2 className="mb-4">Skills</h2>
         <hr />
         <Row className="mb-5 pb-5">
-          <Col md={6} className="mb-4 py-5">
+          <Col md={6} ref={ref} id={inView ? "" : ""} className="mb-4 py-5">
             <h4 className="mb-4">Programming Languages</h4>
             <ul className="list-group ">
               <li className="list-group-item list-group-item-primary">C#</li>

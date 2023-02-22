@@ -1,7 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Card, Image, Button } from "react-bootstrap";
 import Skills from "./Skills";
-import skills from "./Skills";
 
 function AboutMe() {
   return (
