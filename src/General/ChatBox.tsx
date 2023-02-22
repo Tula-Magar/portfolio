@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Button, Card, Container } from "react-bootstrap";
+import React, { useEffect, useState } from "react";
+import { Button, Card, Col, Container, Row } from "react-bootstrap";
 
 const ChatBox = () => {
   const answers = {
@@ -53,15 +53,27 @@ const ChatBox = () => {
   ]);
   const [newMessage, setNewMessage] = useState("");
 
+  useEffect(() => {
+    const chatBox = document.getElementById("chat-box");
+    if (chatBox) {
+      chatBox.scrollTop = chatBox.scrollHeight;
+    }
+  }, [messages]);
+
   const sendMessage = () => {
     if (newMessage !== "") {
       setMessages([...messages, { sender: "user", message: newMessage }]);
-      setNewMessage("");
 
       let matchFound = false;
       for (const [key, value] of Object.entries(answers)) {
         if (newMessage.toLowerCase().includes(key.toLowerCase())) {
-          setMessages([...messages, { sender: "bot", message: value }]);
+          setMessages([
+            ...messages,
+            { sender: "user", message: newMessage },
+            { sender: "bot", message: value },
+          ]);
+          setNewMessage("");
+
           matchFound = true;
           break;
         }
@@ -70,6 +82,7 @@ const ChatBox = () => {
         setTimeout(() => {
           setMessages([
             ...messages,
+            { sender: "user", message: newMessage },
             { sender: "bot", message: answers.default },
           ]);
         }, 1000);
@@ -84,30 +97,59 @@ const ChatBox = () => {
   };
 
   return (
-    <Container className="chat-box d-flex flex-column justify-content-between align-items-center">
-      <Card.Header>
+    <Container className="chat-box d-flex flex-column justify-content-between">
+      <Card.Header className="text-center">
         <h3>Chat with Bot</h3>
       </Card.Header>
-      <Card className="chat-messages bg-dark text-white p-5 my-5">
+      <Card className="chat-messages  bg-dark text-white p-5 my-5">
         {messages.map((message, index) => (
-          <Card.Text key={index} className={message.sender}>
-            <p>{message.message}</p>
-          </Card.Text>
+          <Card.Body key={index} className={message.sender}>
+            <Row className="w-50 mx-auto">
+              <Col sm={12}>
+                {message.sender === "bot" ? (
+                  <div className="d-flex flex-row">
+                    <Card.Text className=" text-start text-success mb-0">
+                      {message.sender}:
+                    </Card.Text>
+
+                    <Card.Text className="text-start ">
+                      &nbsp;{message.message}
+                    </Card.Text>
+                  </div>
+                ) : (
+                  <div className="d-flex flex-row-reverse">
+                    <Card.Text className="text-end ">
+                      {message.message}
+                    </Card.Text>
+                    <Card.Text className=" text-end text-primary mb-0">
+                      {message.sender}:&nbsp;
+                    </Card.Text>
+                  </div>
+                )}
+              </Col>
+            </Row>
+          </Card.Body>
         ))}
       </Card>
-      <div className="chat-input">
-        <input
-          type="text"
-          className="py-1  border-0 px-2 flex-grow-1 shadow-none   rounded-pill  text-center"
-          placeholder="Type a message..."
-          value={newMessage}
-          onChange={(e) => setNewMessage(e.target.value)}
-          onKeyDown={handleKeyDown}
-        />
-        <Button className="ms-2" onClick={sendMessage}>
-          Send
-        </Button>
-      </div>
+      <Card.Footer>
+        <Row>
+          <Col sm={10}>
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Type your message here..."
+              value={newMessage}
+              onChange={(e) => setNewMessage(e.target.value)}
+              onKeyDown={handleKeyDown}
+            />
+          </Col>
+          <Col sm={2}>
+            <Button variant="primary" className="w-100" onClick={sendMessage}>
+              Send
+            </Button>
+          </Col>
+        </Row>
+      </Card.Footer>
     </Container>
   );
 };
