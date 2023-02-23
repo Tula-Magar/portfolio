@@ -6,8 +6,9 @@ export default function Navigation() {
   const [expanded, setExpanded] = useState(false);
   return (
     <>
+    <Container className="pt-3">
       <Navbar expand="md" expanded={expanded}>
-        <Container className="pt-3">
+        
           <Navbar.Brand as={NavLink} to="/">
             Tula Magar
           </Navbar.Brand>
@@ -41,10 +42,18 @@ export default function Navigation() {
               >
                 Contact
               </Nav.Link>
+              <Nav.Link
+                as={NavLink}
+                to="/blog"
+                onClick={() => setExpanded(false)}
+              >
+                Blog
+              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
-        </Container>
+       
       </Navbar>
+      </Container>
       <hr />
     </>
   );
