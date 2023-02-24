@@ -8,8 +8,8 @@ import ChatBox from "./ChatBox";
 export default function Home() {
   return (
     <>
-      <Container className="my-5 mt-3 py-5 text-dark aboutmeContainer ">
-        <Row className="my-5 pt-5">
+      <Container className="my-5 mt-3 py-5 text-dark ">
+        <Container fluid className=" my-5 py-5 aboutmeContainer">
           <Row>
             <Col>
               <Card className="p-4 FirstAboutMe">
@@ -83,7 +83,7 @@ export default function Home() {
               </Card>
             </Col>
           </Row>
-        </Row>
+        </Container>
       </Container>
 
       <Projects />

@@ -42,8 +42,7 @@ function Projects() {
                 inView
                   ? `projectCard ${project.animationClass} in-view h-100`
                   : project.animationClass
-              }
-            >
+              }>
               <Card.Img
                 variant="top"
                 src={project.imgSrc}
@@ -55,8 +54,7 @@ function Projects() {
                 <Link
                   to="#"
                   className="mt-auto mx-auto btn btn-primary"
-                  style={{ width: "150px" }}
-                >
+                  style={{ width: "150px" }}>
                   View details
                 </Link>
               </Card.Body>
