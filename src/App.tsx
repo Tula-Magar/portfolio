@@ -1,12 +1,9 @@
+import { useState } from "react";
 import "./App.css";
-
 import ScrollToTop from "./Scroll/ScrollToTop";
-
 import "bootstrap/dist/css/bootstrap.min.css";
-
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Navitgation from "./Navigation/Navigation";
-
 import Home from "./General/Home";
 import About from "./General/AboutMe";
 import Contact from "./General/Contact";
@@ -15,11 +12,18 @@ import Experience from "./Work/Experience";
 import Blog from "./Blog/Blogs";
 
 const App = () => {
+  const [theme, setTheme] = useState("App");
+
+  const handleThemeChange = () => {
+    setTheme((prevTheme) => (prevTheme === "App" ? "App-dark" : "App"));
+  };
+
   return (
-    <div className="App">
+    <div className={theme}>
       <Router>
         <ScrollToTop />
-        <Navitgation />
+        <Navitgation onThemeChange={handleThemeChange} theme={theme} />
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

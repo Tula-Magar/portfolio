@@ -7,6 +7,12 @@
   animation: gradient 15s ease infinite;
   color: #fff;
 }
+.App-dark {
+  background-image: linear-gradient(to right, #0f193b, #202924);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  color: #fff;
+}
 
 .aboutmeContainer {
   animation: fadein 5s;
