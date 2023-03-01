@@ -1,4 +1,5 @@
 import React from "react";
+import ChatBox from "./ChatBox";
 
 export default function Contact() {
   return (
@@ -47,8 +48,7 @@ export default function Contact() {
                       id="message"
                       placeholder="Enter your message"
                       rows={3}
-                      required
-                    ></textarea>
+                      required></textarea>
                   </div>
                 </div>
                 <div className="row">
@@ -63,6 +63,7 @@ export default function Contact() {
           </div>
         </div>
       </section>
+      <ChatBox />
     </>
   );
 }

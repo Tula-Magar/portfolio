@@ -104,7 +104,7 @@ const ChatBox = () => {
       <Card className="chat-messages  bg-dark text-white p-5 my-5">
         {messages.map((message, index) => (
           <Card.Body key={index} className={message.sender}>
-            <Row className="w-50 mx-auto">
+            <Row>
               <Col sm={12}>
                 {message.sender === "bot" ? (
                   <div className="d-flex flex-row">

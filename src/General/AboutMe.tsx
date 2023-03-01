@@ -1,5 +1,4 @@
-import React from "react";
-import { Container, Row, Col, Card, Image, Button } from "react-bootstrap";
+import { Container, Row, Col, Card, Image } from "react-bootstrap";
 import Skills from "./Skills";
 
 function AboutMe() {
@@ -16,9 +15,9 @@ function AboutMe() {
             />
             <h2>John Doe</h2>
             <p>Web Developer</p>
-            <Button variant="primary" className="mb-3">
-              Download Resume
-            </Button>
+            <a href="/TulaMagarResume.pdf" className="btn btn-info" download>
+              Download
+            </a>
           </Col>
           <Col md={8}>
             <h2>About Me</h2>
