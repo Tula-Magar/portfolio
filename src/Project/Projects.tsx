@@ -1,9 +1,8 @@
 import { Container, Row, Col, Card } from "react-bootstrap";
-import { useInView } from "react-intersection-observer";
+
 import { Link } from "react-router-dom";
 
 function Projects() {
-  const { ref, inView } = useInView({ threshold: 0.5 });
   const ProjectData = [
     {
       id: 1,
@@ -36,13 +35,7 @@ function Projects() {
       <Row className="mb-5 pb-5">
         {ProjectData.map((project) => (
           <Col md={4} className="mb-4" key={project.id}>
-            <Card
-              ref={ref}
-              className={
-                inView
-                  ? `projectCard ${project.animationClass} in-view h-100`
-                  : project.animationClass
-              }>
+            <Card className="in-view h-100">
               <Card.Img
                 variant="top"
                 src={project.imgSrc}

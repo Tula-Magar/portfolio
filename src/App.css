@@ -35,6 +35,21 @@
   animation: gradient 15s ease infinite;
 }
 
+.profilePic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.profilePic:hover {
+  transform: scale(1.05);
+}
+
 .aboutmeContainer {
   animation: fadein 5s;
 }
@@ -65,45 +80,26 @@
     opacity: 1;
   }
 }
-.projectCard {
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-  height: 100%;
+
+.in-view:hover {
+  transform: scale(1.05);
 }
 
-.projectCard.in-view {
-  opacity: 1;
+.resumeDownload {
+  animation: slidein 5s;
 }
 
-.animate-left {
-  opacity: 0;
-  transform: translateX(-50px);
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+@keyframes slidein {
+  from {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
-.animate-left.in-view {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.animate-right {
-  opacity: 0;
-  transform: translateX(50px);
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-}
-
-.animate-right.in-view {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.animate-bottom {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-}
-
-.animate-bottom.in-view {
-  opacity: 1;
-  transform: translateY(0);
+.resumeDownload:hover {
+  transform: scale(1.05);
 }

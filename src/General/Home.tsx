@@ -9,17 +9,20 @@ export default function Home() {
   return (
     <>
       <Container className="vh-100 w-100 d-flex justify-content-center align-items-center">
-        <Row>
+        <Row className="d-flex justify-content-center align-items-center">
           <Col md={4} className="text-center">
             <Image
               src="https://via.placeholder.com/150"
               alt="Profile Picture"
-              className="rounded-circle mb-3"
+              className="profilePic"
               fluid
             />
             <h2>John Doe</h2>
             <p>Web Developer</p>
-            <a href="/TulaMagarResume.pdf" className="btn btn-info" download>
+            <a
+              href="/TulaMagarResume.pdf"
+              className="btn btn-secondary resumeDownload"
+              download>
               Download
             </a>
           </Col>
@@ -41,12 +44,12 @@ export default function Home() {
         <hr />
         <Row>
           <Col md={6}>
-            <h4>Bachelor of Science in Computer Science</h4>
-            <p>University of Example, 2015-2019</p>
+            <h4>Bachelor of Art in Computer Science</h4>
+            <p>University of New Hampshire, 2019-2022</p>
           </Col>
           <Col md={6}>
-            <h4>Master of Science in Information Technology</h4>
-            <p>Example University, 2019-2021</p>
+            <h4>Associate degree in Computer Science</h4>
+            <p>Manchester Community College, 2016-2019</p>
           </Col>
         </Row>
       </Container>

@@ -13,7 +13,7 @@ export default function Navigation({ onThemeChange, theme }: NavigationProps) {
 
   return (
     <>
-      <Container className="pt-3">
+      <Container className="pt-3 pb-3">
         <Navbar expand="md" expanded={expanded}>
           <Navbar.Brand as={NavLink} to="/" className="text-white">
             Tula Magar
@@ -69,7 +69,6 @@ export default function Navigation({ onThemeChange, theme }: NavigationProps) {
           </Navbar.Collapse>
         </Navbar>
       </Container>
-      <hr />
     </>
   );
 }
