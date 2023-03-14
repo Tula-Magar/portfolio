@@ -2,6 +2,7 @@ import React from "react";
 import { Col, Container, Row, Image } from "react-bootstrap";
 import Projects from "../Project/Projects";
 import Skills from "./Skills";
+import Myprofile from "../Images/Me.jpg";
 
 import ChatBox from "./ChatBox";
 
@@ -12,18 +13,19 @@ export default function Home() {
         <Row className="d-flex justify-content-center align-items-center">
           <Col md={4} className="text-center">
             <Image
-              src="https://via.placeholder.com/150"
+              src={Myprofile}
               alt="Profile Picture"
               className="profilePic"
               fluid
             />
-            <h2>John Doe</h2>
-            <p>Web Developer</p>
+            <h2>Tula Magar</h2>
+            <p>Full-Stack Developer</p>
             <a
               href="/TulaMagarResume.pdf"
               className="btn btn-secondary resumeDownload"
-              download>
-              Download
+              download
+            >
+              Resume/Download
             </a>
           </Col>
           <Col md={8}>
