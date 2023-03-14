@@ -24,25 +24,14 @@
     rgba(0, 212, 255, 1) 100%
   ); */
 
-  /* background: linear-gradient(to left, #4facfe, #4facfe),
-    linear-gradient(to right, #ffb347, #ffb347),
-    linear-gradient(to bottom left, #b24592, #f15f79),
-    linear-gradient(to bottom right, #30cfd0, #330867),
-    linear-gradient(to top left, #833ab4, #fd1d1d),
-    linear-gradient(to top right, #3a7bd5, #3a6073); */
-
-  background: linear-gradient(to bottom, #4facfe, #4facfe),
-    linear-gradient(to right, #ffb347, #ffb347), #833ab4;
-  background-size: 100% 50%, 50% 100%, auto;
-  background-repeat: no-repeat;
+  background: linear-gradient(to right, #30cfd0, rgba(77, 172, 254));
 
   animation: gradient 15s ease infinite;
   color: #000;
 }
 
 .App-dark {
-  background-image: linear-gradient(to right, #0f193b, #202924);
-  background-size: 400% 400%;
+  background: linear-gradient(to right, #833ab4, #3a7bd5);
   animation: gradient 15s ease infinite;
 }
 
