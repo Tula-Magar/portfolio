@@ -97,60 +97,63 @@ const ChatBox = () => {
   };
 
   return (
-    <Container className="chat-box d-flex flex-column justify-content-between">
-      <Card.Header className="text-center">
-        <h3>Chat with Bot</h3>
-      </Card.Header>
-      <Card className="chat-messages  bg-dark text-white p-5 my-5">
-        {messages.map((message, index) => (
-          <Card.Body key={index} className={message.sender}>
-            <Row>
-              <Col sm={12}>
-                {message.sender === "bot" ? (
-                  <div className="d-flex flex-row">
-                    <Card.Text className=" text-start text-success mb-0">
-                      {message.sender}:
-                    </Card.Text>
+    <>
+      <div className="bouncing-container">
+        <h3 className="bouncing-text">Chat with Bot</h3>
+      </div>
+      <Container className="chat-box d-flex flex-column justify-content-between">
+        <Card.Header className="text-center"></Card.Header>
+        <Card className="chat-messages  bg-dark text-white p-5 my-5">
+          {messages.map((message, index) => (
+            <Card.Body key={index} className={message.sender}>
+              <Row>
+                <Col sm={12}>
+                  {message.sender === "bot" ? (
+                    <div className="d-flex flex-row">
+                      <Card.Text className=" text-start text-success mb-0">
+                        {message.sender}:
+                      </Card.Text>
 
-                    <Card.Text className="text-start ">
-                      &nbsp;{message.message}
-                    </Card.Text>
-                  </div>
-                ) : (
-                  <div className="d-flex flex-row-reverse">
-                    <Card.Text className="text-end ">
-                      {message.message}
-                    </Card.Text>
-                    <Card.Text className=" text-end text-primary mb-0">
-                      {message.sender}:&nbsp;
-                    </Card.Text>
-                  </div>
-                )}
-              </Col>
-            </Row>
-          </Card.Body>
-        ))}
-      </Card>
-      <Card.Footer>
-        <Row>
-          <Col sm={10}>
-            <input
-              type="text"
-              className="form-control"
-              placeholder="Type your message here..."
-              value={newMessage}
-              onChange={(e) => setNewMessage(e.target.value)}
-              onKeyDown={handleKeyDown}
-            />
-          </Col>
-          <Col sm={2}>
-            <Button variant="primary" className="w-100" onClick={sendMessage}>
-              Send
-            </Button>
-          </Col>
-        </Row>
-      </Card.Footer>
-    </Container>
+                      <Card.Text className="text-start ">
+                        &nbsp;{message.message}
+                      </Card.Text>
+                    </div>
+                  ) : (
+                    <div className="d-flex flex-row-reverse">
+                      <Card.Text className="text-end ">
+                        {message.message}
+                      </Card.Text>
+                      <Card.Text className=" text-end text-primary mb-0">
+                        {message.sender}:&nbsp;
+                      </Card.Text>
+                    </div>
+                  )}
+                </Col>
+              </Row>
+            </Card.Body>
+          ))}
+        </Card>
+        <Card.Footer>
+          <Row>
+            <Col sm={10}>
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Type your message here..."
+                value={newMessage}
+                onChange={(e) => setNewMessage(e.target.value)}
+                onKeyDown={handleKeyDown}
+              />
+            </Col>
+            <Col sm={2}>
+              <Button variant="primary" className="w-100" onClick={sendMessage}>
+                Send
+              </Button>
+            </Col>
+          </Row>
+        </Card.Footer>
+      </Container>
+    </>
   );
 };
 

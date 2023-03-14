@@ -103,3 +103,27 @@
 .resumeDownload:hover {
   transform: scale(1.05);
 }
+
+.bouncing-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.bouncing-text {
+  animation: bounce 5s infinite linear;
+  display: inline-block;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateX(0);
+    color: #fff;
+  }
+  50% {
+    transform: translateX(-100%);
+    color: #000;
+  }
+}
