@@ -32,6 +32,7 @@ function Projects() {
 
   return (
     <Container className="my-5 py-5">
+      <h2 className="text-center mb-5">Projects</h2>
       <Row className="mb-5 pb-5">
         {ProjectData.map((project) => (
           <Col md={4} className="mb-4" key={project.id}>

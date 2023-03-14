@@ -40,7 +40,7 @@ export default function Home() {
 
       <Projects />
       <Container className="py-5">
-        <h2>Education</h2>
+        <h2 className="mt-5 pt-5">Education</h2>
         <hr />
         <Row>
           <Col md={6}>
