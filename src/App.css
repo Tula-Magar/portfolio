@@ -127,3 +127,17 @@
     color: #000;
   }
 }
+
+.project-btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.5s ease;
+}
+
+.project-btn:hover {
+  background-color: #fff;
+  color: #007bff; /* Change text color on hover */
+}
