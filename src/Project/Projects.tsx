@@ -62,11 +62,12 @@ function Projects() {
   return (
     <Container className="my-5 py-5">
       <h2 className="text-center mb-5">Projects</h2>
-      <div className="mb-4">
+      <div className="mb-4 projectFilterContainer">
         <input
           type="text"
           placeholder="Search projects"
           value={searchInput}
+          className="projectFilter"
           onChange={(e) => setSearchInput(e.target.value)}
         />
       </div>
