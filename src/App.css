@@ -45,6 +45,12 @@
   margin-bottom: 50px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
+.sticky-top {
+  background-color: #333333;
+  position: sticky;
+  top: 0;
+  z-index: 1100;
+}
 
 .profilePic:hover {
   transform: scale(1.05);

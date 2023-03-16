@@ -3,7 +3,7 @@ import "./App.css";
 import ScrollToTop from "./Scroll/ScrollToTop";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
-import Navitgation from "./Navigation/Navigation";
+import Navigation from "./Navigation/Navigation";
 import Home from "./General/Home";
 import About from "./General/AboutMe";
 import Contact from "./General/Contact";
@@ -22,7 +22,7 @@ const App = () => {
     <div className={theme}>
       <Router>
         <ScrollToTop />
-        <Navitgation onThemeChange={handleThemeChange} theme={theme} />
+        <Navigation onThemeChange={handleThemeChange} theme={theme} />
 
         <Routes>
           <Route path="/" element={<Home />} />

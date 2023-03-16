@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+
 import { Col, Container, Row, Image } from "react-bootstrap";
 import Projects from "../Project/Projects";
 import Skills from "./Skills";
@@ -7,6 +8,11 @@ import Myprofile from "../Images/Me.jpg";
 import ChatBox from "./ChatBox";
 
 export default function Home() {
+  const [showMore, setShowMore] = useState(false);
+
+  const handleToggle = () => {
+    setShowMore(!showMore);
+  };
   return (
     <>
       <Container className="vh-100 w-100 d-flex justify-content-center align-items-center">
@@ -23,8 +29,7 @@ export default function Home() {
             <a
               href="/TulaMagarResume.pdf"
               className="btn btn-secondary resumeDownload"
-              download
-            >
+              download>
               Resume/Download
             </a>
           </Col>
@@ -36,10 +41,23 @@ export default function Home() {
               proficient in a wide range of programming languages, frameworks,
               and technologies, including but not limited to:
             </p>
+            {showMore && (
+              <div>
+                <h3>Additional Skills and Experience</h3>
+                <p>
+                  - Skill 1
+                  <br />
+                  - Skill 2
+                  <br />- Skill 3
+                </p>
+              </div>
+            )}
+            <button onClick={handleToggle} className="btn btn-primary">
+              {showMore ? "Show Less" : "Show More"}
+            </button>
           </Col>
         </Row>
       </Container>
-
       <Projects />
       <Container className="py-5">
         <h2 className="mt-5 pt-5">Education</h2>
