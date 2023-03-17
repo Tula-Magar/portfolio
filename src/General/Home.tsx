@@ -4,9 +4,16 @@ import { Col, Container, Row, Image } from "react-bootstrap";
 import Projects from "../Project/Projects";
 import Skills from "./Skills";
 import Myprofile from "../Images/Me.jpg";
+import { motion } from "framer-motion";
 
 import ChatBox from "./ChatBox";
 
+import { FaReact, FaHtml5, FaMicrosoft } from "react-icons/fa";
+import { SiMicrosoftsqlserver } from "react-icons/si";
+import { IoLogoJavascript } from "react-icons/io";
+import { BsBootstrap, BsGithub } from "react-icons/bs";
+import { FiFigma } from "react-icons/fi";
+import { SiDotnet } from "react-icons/si";
 export default function Home() {
   const [showMore, setShowMore] = useState(false);
 
@@ -42,16 +49,45 @@ export default function Home() {
               and technologies, including but not limited to:
             </p>
             {showMore && (
-              <div>
+              <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}>
                 <h3>Additional Skills and Experience</h3>
-                <p>
-                  - Skill 1
-                  <br />
-                  - Skill 2
-                  <br />- Skill 3
-                </p>
-              </div>
+                <ul className="skillsList">
+                  <li>
+                    <FaReact /> React
+                  </li>
+                  <li>
+                    {" "}
+                    <SiDotnet /> .NET Core and .NET Framework
+                  </li>
+                  <li>
+                    <SiMicrosoftsqlserver /> SQL Server
+                  </li>
+
+                  <li>
+                    <FaHtml5 /> HTML/CSS
+                  </li>
+                  <li>
+                    <IoLogoJavascript /> JavaScript
+                  </li>
+                  <li>
+                    <BsBootstrap /> Bootstrap
+                  </li>
+                  <li>
+                    {" "}
+                    <BsGithub /> Git
+                  </li>
+
+                  <li>
+                    {" "}
+                    <FiFigma /> Figma
+                  </li>
+                </ul>
+              </motion.div>
             )}
+
             <button onClick={handleToggle} className="btn btn-primary">
               {showMore ? "Show Less" : "Show More"}
             </button>
