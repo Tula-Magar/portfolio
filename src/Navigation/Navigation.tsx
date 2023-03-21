@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import BootstrapSwitchButton from "bootstrap-switch-button-react";
+import { HashLink } from "react-router-hash-link";
 
 interface NavigationProps {
   onThemeChange: () => void;
@@ -38,12 +39,14 @@ export default function Navigation({ onThemeChange, theme }: NavigationProps) {
                   onClick={() => setExpanded(false)}>
                   Home
                 </Nav.Link>
-                <Nav.Link
-                  as={NavLink}
-                  to="/about"
-                  className="text-white"
-                  onClick={() => setExpanded(false)}>
-                  About
+                <Nav.Link>
+                  <HashLink
+                    as={NavLink}
+                    to="/#aboutme"
+                    className="text-white text-decoration-none"
+                    onClick={() => setExpanded(false)}>
+                    About
+                  </HashLink>
                 </Nav.Link>
                 <Nav.Link
                   as={NavLink}
