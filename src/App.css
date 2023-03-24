@@ -41,9 +41,9 @@
   border-radius: 50%;
   border: 5px solid #fff;
   margin: 0 auto;
-  margin-top: 50px;
   margin-bottom: 50px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 0;
 }
 .sticky-top {
   background-color: #333333;
@@ -158,4 +158,40 @@
 .project-btn:hover {
   background-color: #fff;
   color: #007bff;
+}
+
+.Stack {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  overflow-y: auto; /* Add this line to enable vertical scrolling */
+  max-height: 100vh; /* Add this line to limit the height to the viewport height */
+}
+.Stack::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.Stack {
+  scrollbar-width: none; /* Firefox */
+}
+.App > .about {
+  background: linear-gradient(to right, #30cfd0, rgba(77, 172, 254));
+}
+
+.App-dark > .about {
+  background: linear-gradient(to right, #833ab4, #3a7bd5);
+}
+
+.App > .projects {
+  background: linear-gradient(to right, #30cfd0, rgba(77, 172, 254));
+  position: sticky; /* add position relative to the container */
+}
+
+.App-dark > .projects {
+  background: linear-gradient(to right, #833ab4, #3a7bd5);
+  position: sticky;
 }

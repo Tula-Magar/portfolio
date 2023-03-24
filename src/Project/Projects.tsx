@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 
 import { Link } from "react-router-dom";
+import "../App.css";
 
 interface Project {
   id: number;
@@ -60,111 +61,113 @@ function Projects() {
   );
 
   return (
-    <Container className="my-5 py-5">
-      <h2 className="text-center mb-5">Projects</h2>
-      <div className="mb-4 projectFilterContainer">
-        <input
-          type="text"
-          placeholder="Search projects"
-          value={searchInput}
-          className="projectFilter"
-          onChange={(e) => setSearchInput(e.target.value)}
-        />
-      </div>
-      {filteredProjects.map((project) => (
-        <Row md={12} className="mb-5 pb-5" key={project.id}>
-          {project.id % 2 === 0 ? (
-            <>
-              <Col md={6} className="mb-4 h-100">
-                <Card className="in-view ">
-                  <Card.Img
-                    variant="top"
-                    src={project.imgSrc}
-                    alt={project.imgAlt}
-                  />
-                </Card>
-              </Col>
+    <Container fluid className="Stack projects">
+      <Container className="my-5 py-5">
+        <h2 className="text-center mb-5">Projects</h2>
+        <div className="mb-4 projectFilterContainer">
+          <input
+            type="text"
+            placeholder="Search projects"
+            value={searchInput}
+            className="projectFilter"
+            onChange={(e) => setSearchInput(e.target.value)}
+          />
+        </div>
+        {filteredProjects.map((project) => (
+          <Row md={12} className="mb-5 pb-5" key={project.id}>
+            {project.id % 2 === 0 ? (
+              <>
+                <Col md={6} className="mb-4 h-100">
+                  <Card className="in-view ">
+                    <Card.Img
+                      variant="top"
+                      src={project.imgSrc}
+                      alt={project.imgAlt}
+                    />
+                  </Card>
+                </Col>
 
-              <Col md={6} className="mb-4">
-                <Card className="in-view h-100">
-                  <Card.Body className="d-flex flex-column">
-                    <Card.Title>{project.title}</Card.Title>
+                <Col md={6} className="mb-4">
+                  <Card className="in-view h-100">
+                    <Card.Body className="d-flex flex-column">
+                      <Card.Title>{project.title}</Card.Title>
 
-                    {Array.isArray(project.text) ? (
-                      project.text.map((line, index) => (
-                        <Card.Text key={index}>{line}</Card.Text>
-                      ))
-                    ) : (
-                      <Card.Text>{project.text}</Card.Text>
-                    )}
+                      {Array.isArray(project.text) ? (
+                        project.text.map((line, index) => (
+                          <Card.Text key={index}>{line}</Card.Text>
+                        ))
+                      ) : (
+                        <Card.Text>{project.text}</Card.Text>
+                      )}
 
-                    <div className="d-flex flex-row justify-content-between mt-auto">
-                      <Link
-                        to={project.projectLink}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="mt-auto mx-auto   project-btn">
-                        View Code
-                      </Link>
-                      <Link
-                        to={project.ProjectLive}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="mt-auto mx-auto  project-btn">
-                        View Live
-                      </Link>
-                    </div>
-                  </Card.Body>
-                </Card>
-              </Col>
-            </>
-          ) : (
-            <>
-              <Col md={6} className="mb-4">
-                <Card className="in-view h-100">
-                  <Card.Body className="d-flex flex-column">
-                    <Card.Title>{project.title}</Card.Title>
+                      <div className="d-flex flex-row justify-content-between mt-auto">
+                        <Link
+                          to={project.projectLink}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="mt-auto mx-auto   project-btn">
+                          View Code
+                        </Link>
+                        <Link
+                          to={project.ProjectLive}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="mt-auto mx-auto  project-btn">
+                          View Live
+                        </Link>
+                      </div>
+                    </Card.Body>
+                  </Card>
+                </Col>
+              </>
+            ) : (
+              <>
+                <Col md={6} className="mb-4">
+                  <Card className="in-view h-100">
+                    <Card.Body className="d-flex flex-column">
+                      <Card.Title>{project.title}</Card.Title>
 
-                    {Array.isArray(project.text) ? (
-                      project.text.map((line, index) => (
-                        <Card.Text key={index}>{line}</Card.Text>
-                      ))
-                    ) : (
-                      <Card.Text>{project.text}</Card.Text>
-                    )}
+                      {Array.isArray(project.text) ? (
+                        project.text.map((line, index) => (
+                          <Card.Text key={index}>{line}</Card.Text>
+                        ))
+                      ) : (
+                        <Card.Text>{project.text}</Card.Text>
+                      )}
 
-                    <div className="d-flex flex-row justify-content-between mt-auto">
-                      <Link
-                        to={project.projectLink}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="mt-auto mx-auto   project-btn">
-                        View Code
-                      </Link>
-                      <Link
-                        to={project.ProjectLive}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="mt-auto mx-auto  project-btn">
-                        View Live
-                      </Link>
-                    </div>
-                  </Card.Body>
-                </Card>
-              </Col>
-              <Col md={6} className="mb-4 h-100">
-                <Card className="in-view ">
-                  <Card.Img
-                    variant="top"
-                    src={project.imgSrc}
-                    alt={project.imgAlt}
-                  />
-                </Card>
-              </Col>
-            </>
-          )}
-        </Row>
-      ))}
+                      <div className="d-flex flex-row justify-content-between mt-auto">
+                        <Link
+                          to={project.projectLink}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="mt-auto mx-auto   project-btn">
+                          View Code
+                        </Link>
+                        <Link
+                          to={project.ProjectLive}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="mt-auto mx-auto  project-btn">
+                          View Live
+                        </Link>
+                      </div>
+                    </Card.Body>
+                  </Card>
+                </Col>
+                <Col md={6} className="mb-4 h-100">
+                  <Card className="in-view ">
+                    <Card.Img
+                      variant="top"
+                      src={project.imgSrc}
+                      alt={project.imgAlt}
+                    />
+                  </Card>
+                </Col>
+              </>
+            )}
+          </Row>
+        ))}
+      </Container>
     </Container>
   );
 }
