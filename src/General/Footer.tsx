@@ -9,13 +9,18 @@ function Footer() {
     <footer className="bg-dark text-light text-center mt-5 py-5 pt-3">
       <Container>
         <Row className="py-5">
-          <Col md={4} lg={3}>
+          <Col md={6} lg={3}>
             <h5>Footer Heading</h5>
             <p>
-              Some text here to give a brief introduction about the website.
+              Welcome to my portfolio website! I'm a full-stack developer and
+              this site showcases some of my best work and projects. Whether
+              you're an employer, potential collaborator, or simply interested
+              in my work, I hope you find this site informative and engaging.
+              Please feel free to contact me with any questions or inquiries
+              using the information provided below. Thank you for visiting!
             </p>
           </Col>
-          <Col md={4} lg={3}>
+          <Col md={6} lg={3}>
             <h5>Links</h5>
             <ul className="list-unstyled">
               <li>
@@ -40,7 +45,7 @@ function Footer() {
               </li>
             </ul>
           </Col>
-          <Col md={4} lg={3}>
+          <Col md={6} lg={3}>
             <h5>Connect With Me</h5>
             <ul className="list-unstyled">
               <li>
@@ -60,14 +65,18 @@ function Footer() {
               </li>
             </ul>
           </Col>
-          <Col md={4} lg={3}>
-            <h5>Contact Us</h5>
+          <Col md={6} lg={3}>
+            <h5>
+              <Link className="text-decoration-none" to="/contact">
+                Contact Me
+              </Link>
+            </h5>
             <ul className="list-unstyled">
               <li>
-                <RiMailLine /> email@example.com
+                <RiMailLine /> tmagar448@gmail.com
               </li>
               <li>
-                <BsPhone /> +1 234 567 890
+                <BsPhone /> 603-***-****
               </li>
             </ul>
           </Col>
@@ -75,7 +84,7 @@ function Footer() {
         <Row className="pb-3">
           <Col>
             <p className="text-center">
-              © 2023 MyWebsite. All rights reserved.
+              © 2023 TulaMagarPortfolio. All rights reserved.
             </p>
           </Col>
         </Row>

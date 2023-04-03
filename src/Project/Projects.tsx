@@ -19,7 +19,7 @@ function Projects() {
   const ProjectData: Project[] = [
     {
       id: 1,
-      imgSrc: "https://via.placeholder.com/320x250.png?text=Project+2",
+      imgSrc: "https://via.placeholder.com/300x200.png?text=Project+1",
       imgAlt: "Project 1",
       title: "Online Soccer Shopping",
       projectLink: "https://github.com/Tula-Magar/OnlineSoccerShopping",
@@ -103,14 +103,16 @@ function Projects() {
                         to={project.projectLink}
                         target="_blank"
                         rel="noreferrer"
-                        className="mt-auto mx-auto   project-btn">
+                        className="mt-auto mx-auto   project-btn"
+                      >
                         View Code
                       </Link>
                       <Link
                         to={project.ProjectLive}
                         target="_blank"
                         rel="noreferrer"
-                        className="mt-auto mx-auto  project-btn">
+                        className="mt-auto mx-auto  project-btn"
+                      >
                         View Live
                       </Link>
                     </div>
@@ -138,14 +140,16 @@ function Projects() {
                         to={project.projectLink}
                         target="_blank"
                         rel="noreferrer"
-                        className="mt-auto mx-auto   project-btn">
+                        className="mt-auto mx-auto   project-btn"
+                      >
                         View Code
                       </Link>
                       <Link
                         to={project.ProjectLive}
                         target="_blank"
                         rel="noreferrer"
-                        className="mt-auto mx-auto  project-btn">
+                        className="mt-auto mx-auto  project-btn"
+                      >
                         View Live
                       </Link>
                     </div>
