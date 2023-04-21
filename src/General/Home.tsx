@@ -9,7 +9,7 @@ import { InView } from "react-intersection-observer";
 
 import ChatBox from "./ChatBox";
 
-import { FaReact, FaHtml5, FaMicrosoft } from "react-icons/fa";
+import { FaReact, FaHtml5} from "react-icons/fa";
 import { SiMicrosoftsqlserver } from "react-icons/si";
 import { IoLogoJavascript } from "react-icons/io";
 import { BsBootstrap, BsGithub } from "react-icons/bs";

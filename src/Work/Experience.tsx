@@ -4,7 +4,7 @@ import { Container, Row, Col, Card } from "react-bootstrap";
 function WorkExperience() {
   return (
     <Container className="my-5 py-5 text-dark">
-      <h2 className="mb-5 text-info">Work Experience</h2>
+      <h2 className="mb-5 text-dark">Work Experience</h2>
       <Row className="mb-5">
         <Col>
           <Card>

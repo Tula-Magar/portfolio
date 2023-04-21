@@ -5,7 +5,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Navigation from "./Navigation/Navigation";
 import Home from "./General/Home";
-import About from "./General/AboutMe";
 import Contact from "./General/Contact";
 import Footer from "./General/Footer";
 import Experience from "./Work/Experience";
